@@ -1,0 +1,13 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+     xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd" 
+     name="myBigMemoryGoConfig"> 
+  <!-- Tell BigMemory where to write its data to disk. --> 
+  <diskStore path="/users/badalb/teracotta"/> 
+  <cache name="bigMemoryGoStore" 
+        maxBytesLocalHeap="512M" 
+        maxBytesLocalOffHeap="512M"> 
+    <!-- Tell BigMemory to use the "localRestartable" persistence 
+    strategy for fast restart (optional). --> 
+    <persistence strategy="localRestartable" synchronousWrites="true"/>
+  </cache> 
+</ehcache>
